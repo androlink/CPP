@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 15:25:23 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/21 18:43:24 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/24 21:45:56 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 	ClapTrap	c1;
 	ClapTrap	c2 = ClapTrap(c1);
 	ClapTrap	c3;
-	ClapTrap	c4 = ClapTrap("patrick");
+	ClapTrap	c4 = ClapTrap("Patrick");
 
 	c3 = c2;
 	std::cout << c1 << std::endl;
