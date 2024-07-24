@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 15:25:23 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 00:25:50 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/24 21:46:19 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,26 @@
 
 int	main(void)
 {
-	ScavTrap	c1;
-	ScavTrap	c2 = ScavTrap(c1);
-	ScavTrap	c3;
-	ScavTrap	c4 = ScavTrap("patrick");
+	ScavTrap s1;
+	ScavTrap s2 = ScavTrap("Patric");
+	ScavTrap c1 = s1;
+	ScavTrap c2 = ScavTrap("Michel");
 
-	c3 = c2;
+	c1 = s2;
+
 	std::cout << c1 << std::endl;
 	std::cout << c2 << std::endl;
-	std::cout << c3 << std::endl;
-	std::cout << c4 << std::endl;
+	std::cout << s1 << std::endl;
+	std::cout << s2 << std::endl;
+	c2.attack(s2.getName());
+	s2.takeDamage(c2.getDamage());
+	std::cout << s2 << std::endl;
+	std::cout << c2 << std::endl;
+	s2.attack(c2.getName());
+	c2.takeDamage(s2.getDamage());
+	std::cout << s2 << std::endl;
+	std::cout << c2 << std::endl;
 
-	c4.beRepaired(5);
-	c4.takeDamage(1);
-	c4.attack("michel");
-	std::cout << c4 << std::endl;
-	c4.takeDamage(15);
-	std::cout << c4 << std::endl;
-	c4.takeDamage(1);
-	c4.beRepaired(5);
-	c4.attack("michel");
-	c4.guardGate();
+	s2.guardGate();
+
 }

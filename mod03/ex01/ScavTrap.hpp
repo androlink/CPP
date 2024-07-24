@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:34:57 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 00:18:37 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/24 17:37:48 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ScavTrap: public ClapTrap
 
 	/*	utils	*/
 		ScavTrap		&operator=(const ScavTrap &value);
-		virtual void	attack(const std::string& target);
+		void	attack(const std::string& target);
 		void			guardGate();
 
 

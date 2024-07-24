@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:34:55 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 00:23:34 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/24 21:45:02 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,16 @@ void	ScavTrap::attack(const std::string& target)
 
 void	ScavTrap::guardGate()
 {
+	if (this->getHitPoint() == 0)
+	{
 		std::cout << "ScavTrap "
 		<< this->getName()
-		<< " now guard the gate"
+		<< " as no life left"
 		<< std::endl;
+		return ;
+	}
+	std::cout << "ScavTrap "
+	<< this->getName()
+	<< " now guard the gate"
+	<< std::endl;
 }
