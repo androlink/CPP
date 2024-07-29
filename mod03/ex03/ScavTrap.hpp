@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 17:34:57 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 22:40:03 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/29 14:34:59 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ScavTrap: virtual public ClapTrap
 	public:
 	/*	constructor	*/
 		ScavTrap();
-		ScavTrap(std::string name);
+		ScavTrap(std::string _name);
 		ScavTrap(const ScavTrap &value);
 		~ScavTrap();
 

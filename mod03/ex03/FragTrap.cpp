@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 21:54:00 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 22:52:59 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/29 14:35:29 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ ClapTrap()
 	damage = 30;
 }
 
-FragTrap::FragTrap(std::string name):
-ClapTrap(name)
+FragTrap::FragTrap(std::string _name):
+ClapTrap(_name)
 {
 	std::cout << "[FragTrap]	name constructor called" << std::endl;
 	hitPoint = 100;

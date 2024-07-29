@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 15:25:25 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/23 23:55:07 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/29 14:34:40 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ name("Jean?"), hitPoint(10), energy(10), damage(0)
 	std::cout << "[ClapTrap]	Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name):
-name(name), hitPoint(10), energy(10), damage(0)
+ClapTrap::ClapTrap(std::string _name):
+name(_name), hitPoint(10), energy(10), damage(0)
 {
 	std::cout << "[ClapTrap]	name constructor called" << std::endl;
 }

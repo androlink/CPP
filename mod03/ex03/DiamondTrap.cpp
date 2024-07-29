@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 22:27:33 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 23:41:03 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/29 14:38:43 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ ScavTrap(), FragTrap()
 	damage = 30;
 }
 
-DiamondTrap::DiamondTrap(std::string name):
-ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap(std::string _name):
+ScavTrap(_name), FragTrap(_name)
 {
 	std::cout << "[DiamondTrap]	name constructor called" << std::endl;
 	this->name = ClapTrap::name;
 	ClapTrap::name = ClapTrap::name + "_clap_name";
 	hitPoint = 100;
-	energy = 100;
+	energy = 50;
 	damage = 30;
 }
 

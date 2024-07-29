@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 22:27:35 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 23:38:06 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/29 14:33:50 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class DiamondTrap: public ScavTrap, public FragTrap
 	public:
 	/*	constructor	*/
 		DiamondTrap();
-		DiamondTrap(std::string name);
+		DiamondTrap(std::string _name);
 		DiamondTrap(const DiamondTrap &value);
 		~DiamondTrap();
 

@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 15:25:20 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/24 22:46:11 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/29 14:34:29 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class	ClapTrap
 	public:
 	/*	constructor	*/
 		ClapTrap();
-		ClapTrap(std::string name);
+		ClapTrap(std::string _name);
 		ClapTrap(const ClapTrap & value);
 		~ClapTrap();
 
