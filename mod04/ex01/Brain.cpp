@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 15:22:48 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/29 16:39:20 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/29 18:12:25 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ Brain::Brain()
 Brain::Brain(const Brain &brain)
 {
 	std::cout << "[Brain]	Copy constructor called" << std::endl;
-	*this = brain;
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = brain.ideas[i];
 }
 
 Brain::~Brain()
