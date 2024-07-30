@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 11:36:40 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/29 16:22:18 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/30 17:15:29 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,19 @@
 class Animal
 {
 	public:
-		Animal();
-		Animal(const Animal &value);
-		Animal(std::string type);
+
 		virtual ~Animal();
+		Animal(const Animal &value);
+		Animal();
+		Animal(std::string type);
 
 		std::string	getType() const;
 		void		setType(std::string v);
-		Brain		*getBrain() const;
 		Animal		&operator=(const Animal &value);
 		virtual void	makeSound() const;
 
 	protected:
 		std::string	_type;
-		Brain		*brain;
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 13:23:55 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/29 17:59:55 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/30 17:53:16 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void	allocTest()
 void	copyCat()
 {
 	std::cout << "/*	copyCat	*/" << std::endl;
-	Animal *c1 = new Cat();
-	const Animal *c2 = new Animal(*c1);
+	Cat *c1 = new Cat();
+	const Cat *c2 = new Cat(*c1);
 
 	std::cout << "c1 " << c1->getBrain()->getIdeaAt(0) << std::endl;
 	std::cout << "c2 " << c2->getBrain()->getIdeaAt(0) << std::endl;
@@ -64,10 +64,36 @@ void	copyCat()
 		delete c2;
 }
 
+void	copyDog()
+{
+	std::cout << "/*	copyDog	*/" << std::endl;
+	Dog *c1 = new Dog();
+	const Dog *c2 = new Dog(*c1);
+
+	std::cout << "c1 " << c1->getBrain()->getIdeaAt(0) << std::endl;
+	std::cout << "c2 " << c2->getBrain()->getIdeaAt(0) << std::endl;
+
+	{
+		Dog *c3 = new Dog();
+
+		c3->getBrain()->setIdeaAt("destroy the world", 0);
+
+		std::cout << "c1 " << c1->getBrain()->getIdeaAt(0) << std::endl;
+		std::cout << "c3 " << c3->getBrain()->getIdeaAt(0) << std::endl;
+		delete c1;
+		c1 = new Dog(*c3);
+		delete c3;
+	}
+	std::cout << "c1 " << c1->getBrain()->getIdeaAt(1) << std::endl;
+		delete c1;
+		delete c2;
+}
+
 int main()
 {
-	//defaultTest();
-	//allocTest();
+	defaultTest();
+	allocTest();
 	copyCat();
+	copyDog();
 	return 0;
 }

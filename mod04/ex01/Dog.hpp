@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 11:46:43 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/29 15:09:41 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/30 17:15:36 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class Dog: public Animal
 
 		Dog		&operator=(const Dog &value);
 		virtual void	makeSound() const;
+		Brain		*getBrain() const;
 
 	private:
+		Brain		*brain;
 
 };
 

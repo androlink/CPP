@@ -6,7 +6,7 @@
 /*   By: gcros <gcros@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 11:46:17 by gcros             #+#    #+#             */
-/*   Updated: 2024/07/29 15:09:53 by gcros            ###   ########.fr       */
+/*   Updated: 2024/07/30 17:15:33 by gcros            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class Cat: public Animal
 
 		Cat		&operator=(const Cat &value);
 		virtual void	makeSound() const;
+		Brain		*getBrain() const;
 
 	private:
+		Brain		*brain;
 
 };
 
