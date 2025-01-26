@@ -1,7 +1,6 @@
 
 *
-!ex*/
-!mod*/
 !*.cpp
 !Makefile
 !*.hpp
+.vscode/
