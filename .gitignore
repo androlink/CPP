@@ -1,6 +1,2 @@
-
-*
-!*.cpp
-!Makefile
-!*.hpp
+*.txt
 .vscode/
