@@ -1,6 +1,6 @@
 NAME = form
 
-CC = c++
+CXX = c++
 RM = rm
 
 CPPFLAGS = -g -Wall -Wextra -Werror -std=c++98
@@ -27,11 +27,11 @@ all:	$(NAME)
 -include $(DFILES)
 
 $(NAME): $(OFILES)
-	$(CC) $(CPPFLAGS) -o $@ $(OFILES)
+	$(CXX) $(CPPFLAGS) -o $@ $(OFILES)
 
 $(BDIR)%.o : $(SDIR)%.cpp
 	mkdir -p $(@D)
-	$(CC) $(CPPFLAGS) $(DFLAGS) -c $< -o $@ -I $(IDIR)
+	$(CXX) $(CPPFLAGS) $(DFLAGS) -c $< -o $@ -I $(IDIR)
 
 clean:
 	$(RM) -f $(OFILES) $(DFILES)

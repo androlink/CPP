@@ -1,6 +1,6 @@
 NAME = recover_file
 
-CC = c++
+CXX = c++
 RMF = rm -f
 
 CPPFLAGS = -g -Wall -Wextra -Werror -std=c++98
@@ -10,7 +10,7 @@ DDIR = $(BDIR)
 HDIR = .
 
 SRCS := tests.cpp
-SRCS += Account.cpp
+SRCS += ACXXount.cpp
 
 OFILES = $(SRCS:%.cpp=%.o)
 DFILES = $(SRCS:%.cpp=%.d)
@@ -22,11 +22,11 @@ all:
 -include $(DFILES)
 
 $(NAME) : $(OFILES)
-	$(CC) $(CPPFLAGS) -o $@ $(OFILES)
+	$(CXX) $(CPPFLAGS) -o $@ $(OFILES)
 	@echo "$(NAME) compilation done";
 
 %.o : %.cpp
-	$(CC) $(CPPFLAGS) $(DFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) $(DFLAGS) -c $< -o $@
 	@echo "	$@"
 
 clean	::
